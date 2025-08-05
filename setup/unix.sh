@@ -7,10 +7,10 @@ echo Makking the main haxelib and setuping folder in same time..
 mkdir ~/haxelib && haxelib setup ~/haxelib
 echo Installing dependencies...
 echo This might take a few moments depending on your internet speed.
-haxelib install lime 8.1.2
-haxelib install openfl 9.2.2
-haxelib install flixel-tools 1.5.1
+haxelib git lime https://github.com/JuniorNovoa1/lime-android-git
+haxelib git openfl https://github.com/openfl/openfl/tree/cb059d80a6db503ec827cea1e90f23c2abf3efbb
 haxelib git flixel https://github.com/CodenameCrew/cne-flixel
 haxelib git flixel-addons https://github.com/CodenameCrew/cne-flixel-addons
+haxelib git flixel-tools https://github.com/HaxeFlixel/flixel-tools/tree/dev
 haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
 echo Finished!
