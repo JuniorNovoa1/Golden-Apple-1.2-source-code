@@ -13,5 +13,6 @@ haxelib git flixel https://github.com/CodenameCrew/cne-flixel
 haxelib git flixel-addons https://github.com/CodenameCrew/cne-flixel-addons
 haxelib git flixel-ui https://github.com/HaxeFlixel/flixel-ui 820eefdf7ac438fa6c4795294c1df0c567e161c9
 haxelib git flixel-tools https://github.com/HaxeFlixel/flixel-tools dev
+haxelib git hxcpp https://github.com/HaxeFoundation/hxcpp e85f5aba10d7f83a6103e8f4d27c11731925b6a8
 haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
 echo Finished!
