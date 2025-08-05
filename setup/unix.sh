@@ -8,7 +8,7 @@ mkdir ~/haxelib && haxelib setup ~/haxelib
 echo Installing dependencies...
 echo This might take a few moments depending on your internet speed.
 haxelib git lime https://github.com/JuniorNovoa1/lime-android-git
-haxelib git openfl https://github.com/openfl/openfl/tree/cb059d80a6db503ec827cea1e90f23c2abf3efbb
+haxelib git openfl https://github.com/CodenameCrew/cne-openfl
 haxelib git flixel https://github.com/CodenameCrew/cne-flixel
 haxelib git flixel-addons https://github.com/CodenameCrew/cne-flixel-addons
 haxelib git flixel-tools https://github.com/HaxeFlixel/flixel-tools/tree/dev
