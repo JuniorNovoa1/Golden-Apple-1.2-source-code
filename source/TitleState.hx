@@ -168,8 +168,6 @@ class TitleState extends MusicBeatState
 		else
 			initialized = true;
 
-		createCoolText(['Created by people like:']);
-
 		// credGroup.add(credTextShit);
 	}
 
@@ -316,8 +314,13 @@ class TitleState extends MusicBeatState
 
 		switch (curBeat)
 		{
+			case 1:
+				createCoolText(['Created by people like:']);
 			case 2:
-				addMoreText('Grantare\nLancey\nCynda\nRubysArt_');
+				addMoreText('Grantare');
+				addMoreText('Lancey');
+				addMoreText('Cynda');
+				addMoreText('RubysArt_');
 			case 3:
 				addMoreText('and the wonderful contributors!');
 			case 4:

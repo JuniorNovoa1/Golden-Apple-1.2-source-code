@@ -54,7 +54,7 @@ class CoolUtil
 		var diff:String = 'unknown';
 		switch(song.toLowerCase())
 		{
-			case 'applecore' | 'penis' | 'wednesday' | 'among-us-penis-sex':
+			case 'applecore' | 'penis' | 'wednesday' | 'cotton-candy' | 'among-us-penis-sex':
 				diff = 'extreme';
 			case 'disruption' | 'jambino' | 'sugar-rush' | 'ferocious' | 'gift-card' | 'og' | 'deformation' | 'algebra' | 'slices' | 'left-unchecked' | 'collision' | 'ready-loud' | 'poopers' | 'amongfairness' | 'the-boopadoop-song' | 'sweaty-workout' | 'clit' | 'sit-on-my-face' | 'gobbledegook' | 'generic' | 'encrypted' | 'bandu-radical' | 'locked-lips':
 				diff = 'hard';

@@ -1,6 +1,6 @@
 package;
 
-import flixel.system.FlxAssets.FlxShader;
+import FlxFixedShader;
 
 class GlitchEffect
 {
@@ -146,7 +146,7 @@ class InvertColorsEffect
 
 }
 
-class GlitchShader extends FlxShader
+class GlitchShader extends FlxFixedShader
 {
     @:glFragmentSource('
     #pragma header
@@ -195,7 +195,7 @@ class GlitchShader extends FlxShader
     }
 }
 
-class InvertShader extends FlxShader
+class InvertShader extends FlxFixedShader
 {
     @:glFragmentSource('
     #pragma header
@@ -220,7 +220,7 @@ class InvertShader extends FlxShader
 
 
 
-class DistortBGShader extends FlxShader
+class DistortBGShader extends FlxFixedShader
 {
     @:glFragmentSource('
     #pragma header
@@ -275,7 +275,7 @@ class DistortBGShader extends FlxShader
 }
 
 
-class PulseShader extends FlxShader
+class PulseShader extends FlxFixedShader
 {
     @:glFragmentSource('
     #pragma header
@@ -306,11 +306,11 @@ class PulseShader extends FlxShader
         if (uampmul > 0.0)
         {
             float offsetX = sin(pt.y * uFrequency + uTime * uSpeed);
-            float offsetY = sin(pt.x * (uFrequency * 2) - (uTime / 2) * uSpeed);
-            float offsetZ = sin(pt.z * (uFrequency / 2) + (uTime / 3) * uSpeed);
-            pt.x = mix(pt.x,sin(pt.x / 2 * pt.y + (5 * offsetX) * pt.z),uWaveAmplitude * uampmul);
-            pt.y = mix(pt.y,sin(pt.y / 3 * pt.z + (2 * offsetZ) - pt.x),uWaveAmplitude * uampmul);
-            pt.z = mix(pt.z,sin(pt.z / 6 * (pt.x * offsetY) - (50 * offsetZ) * (pt.z * offsetX)),uWaveAmplitude * uampmul);
+            float offsetY = sin(pt.x * (uFrequency * 2.0) - (uTime / 2.0) * uSpeed);
+            float offsetZ = sin(pt.z * (uFrequency / 2.0) + (uTime / 3.0) * uSpeed);
+            pt.x = mix(pt.x,sin(pt.x / 2.0 * pt.y + (5.0 * offsetX) * pt.z),uWaveAmplitude * uampmul);
+            pt.y = mix(pt.y,sin(pt.y / 3.0 * pt.z + (2.0 * offsetZ) - pt.x),uWaveAmplitude * uampmul);
+            pt.z = mix(pt.z,sin(pt.z / 6.0 * (pt.x * offsetY) - (50.0 * offsetZ) * (pt.z * offsetX)),uWaveAmplitude * uampmul);
         }
 
 

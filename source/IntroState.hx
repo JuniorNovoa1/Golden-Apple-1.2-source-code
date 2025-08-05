@@ -44,7 +44,7 @@ class IntroState extends MusicBeatState
         add(logo);
         logo.animation.play('intro');
         FlxTween.tween(logo, {alpha: 1}, 0.75);
-        FlxG.sound.play(Paths.sound('junk'));
+        new FlxTimer().start(1, function(tmr:FlxTimer){ FlxG.sound.play(Paths.sound('junk')); });
 		super.create();
 	}
 

@@ -53,16 +53,6 @@ class PlayMenuState extends MusicBeatState
 
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
-	public static var bgPaths:Array<String> = 
-	[
-		'backgrounds/biorange',
-		'backgrounds/cudroid',
-		'backgrounds/dreambean',
-		'backgrounds/roflcopter',
-		'backgrounds/seth',
-		'backgrounds/vio',
-		'backgrounds/zevisly'
-	];
 
 	override function create()
 	{

@@ -47,19 +47,11 @@ class MainMenuState extends MusicBeatState
 
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
-	public static var bgPaths:Array<String> = 
-	[
-		'backgrounds/biorange',
-		'backgrounds/cudroid',
-		'backgrounds/dreambean',
-		'backgrounds/roflcopter',
-		'backgrounds/seth',
-		'backgrounds/vio',
-		'backgrounds/zevisly'
-	];
+	public static var bgPaths:Array<String> = [];
 
 	override function create()
 	{
+		
 		if (!FlxG.sound.music.playing)
 		{
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
@@ -295,6 +287,11 @@ class MainMenuState extends MusicBeatState
 	}
 	public static function randomizeBG():flixel.system.FlxAssets.FlxGraphicAsset
 	{
+		if (SaveFileState.saveFile == null)
+			bgPaths = ['backgrounds/biorange','backgrounds/cudroid','backgrounds/dreambean','backgrounds/roflcopter','backgrounds/seth','backgrounds/vio','backgrounds/zevisly'];
+		else
+			SaveFileState.saveFile.data.elfMode ? bgPaths = ["backgrounds_elf/0", "backgrounds_elf/1"] : bgPaths = ['backgrounds/biorange','backgrounds/cudroid','backgrounds/dreambean','backgrounds/roflcopter','backgrounds/seth','backgrounds/vio','backgrounds/zevisly'];
+		
 		var chance:Int = FlxG.random.int(0, bgPaths.length - 1);
 		return Paths.image(bgPaths[chance]);
 	}

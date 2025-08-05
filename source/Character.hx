@@ -2672,8 +2672,8 @@ class Character extends FlxSprite
 				animation.addByIndices('NOOMYPHONES', 'phones fall', [0, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 17], '', 24, false);
 				
 				for (z in ['idle', 'singUP', 'singRIGHT', 'singLEFT', 'singDOWN', 'NOOMYPHNOES']) {
-					addOffset(z, 0, 350 * 0.85);
-					addOffset('$z-alt', 0, 350 * 0.85);
+					addOffset(z, 250, 350 * 0.85);
+					addOffset('$z-alt', 250, 475 * 0.85);
 				}
 
 				globaloffset[0] = 150;
@@ -2710,8 +2710,8 @@ class Character extends FlxSprite
 				
 
 				for (z in ['idle', 'singUP', 'singRIGHT', 'singLEFT', 'singDOWN', 'NOOMYPHNOES']) {
-					addOffset(z, 0, 350 * 0.8);
-					addOffset('$z-alt', 0, 350 * 0.8);
+					addOffset(z, 250, 700 * 0.8);
+					addOffset('$z-alt', 250, 700 * 0.8);
 				}
 
 				globaloffset[0] = 150;

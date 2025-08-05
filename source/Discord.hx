@@ -65,9 +65,9 @@ class DiscordClient
 		var realState = state;
 
 		// MAKE SURE THIS IS COMMENTED OUT FOR RELEASES
-		realDetails = "NO LEAKS!!!";
+		/*realDetails = "NO LEAKS!!!";
 		realSmallImage = 'icon_logo';
-		realState = 'NO LEAKS!!!';
+		realState = 'NO LEAKS!!!';*/
 
 		if (endTimestamp > 0)
 		{

@@ -5051,6 +5051,7 @@ class PlayState extends MusicBeatState
 		var appleR = controls.APPLE_R;
 
 		var controlArray:Array<Bool> = [leftP, downP, upP, rightP];
+		var releaseArray:Array<Bool> = [leftR, downR, upR, rightR];
 		if(isRing)
 		{
 			controlArray = [leftP, downP, appleP, upP, rightP];
@@ -5100,18 +5101,17 @@ class PlayState extends MusicBeatState
 
 				for (note in possibleNotes) 
 				{
-					var fuckinDick:Int = 4;
-					if(isRing)
-					{
-						fuckinDick++;
-					}
-					if (controlArray[note.noteData % fuckinDick])
-					{
+					if (!note.mustPress)
+						continue; //how did this get here
+					
+					if (controlArray[note.noteData % 4])
+					{ //further tweaks to the conductor safe zone offset multiplier needed.
 						if (lasthitnotetime > Conductor.songPosition - Conductor.safeZoneOffset
-							&& lasthitnotetime < Conductor.songPosition + (Conductor.safeZoneOffset * 0.2)) //reduce the past allowed barrier just so notes close together that aren't jacks dont cause missed inputs
+							&& lasthitnotetime < Conductor.songPosition + (Conductor.safeZoneOffset * 0.08)) //reduce the past allowed barrier just so notes close together that aren't jacks dont cause missed inputs
 						{
-							if (((note.noteData % fuckinDick)) == ((lasthitnote % fuckinDick)))
+							if ((note.noteData % 4) == (lasthitnote % 4))
 							{
+								lasthitnotetime = -999999; //reset the last hit note time
 								continue; //the jacks are too close together
 							}
 						}

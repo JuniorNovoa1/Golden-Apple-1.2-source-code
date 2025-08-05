@@ -196,6 +196,24 @@ class GameOverSubstate extends MusicBeatSubstate
 				PlayState.storyWeek = 1;
 				LoadingState.loadAndSwitchState(new PlayState());
 			}
+			else if (PlayState.SONG.song.toLowerCase() == 'ferocious') {
+				trace("WUH OH!!!");
+				SaveFileState.saveFile.data.elfDiscovered = true;
+				
+				PlayState.practicing = false;
+				PlayState.fakedScore = false;
+				PlayState.deathCounter = 0;
+
+				var poop:String = Highscore.formatSong('penis', 1);
+				trace(poop);
+
+				PlayState.SONG = Song.loadFromJson(poop, 'penis');
+				PlayState.isStoryMode = false;
+				PlayState.storyDifficulty = 1;
+
+				PlayState.storyWeek = 1;
+				LoadingState.loadAndSwitchState(new PlayState());
+			}
 			/*else if (PlayState.SONG.song.toLowerCase() == 'recovered-project') {
 				trace("WUH OH!!!");
 
