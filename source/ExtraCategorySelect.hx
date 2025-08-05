@@ -1,11 +1,12 @@
 package;
 
-import io.newgrounds.components.GatewayComponent;
 import flixel.tweens.misc.ColorTween;
 import flixel.math.FlxRandom;
 import openfl.net.FileFilter;
 import openfl.filters.BitmapFilter;
+#if shadersEnabled
 import Shaders.PulseEffect;
+#end
 import Section.SwagSection;
 import Song.SwagSong;
 import flixel.FlxBasic;
@@ -61,7 +62,7 @@ using StringTools;
 class ExtraCategorySelect extends MusicBeatState
 {
 
-    public static var cats:Array<String> = ['extra', 'ocs', 'joke', 'iykyk', 'secret', 'awesome', 'covers'/*, 'minus'*/];
+    public static var cats:Array<String> = ['extra', 'ocs', 'joke', 'iykyk', 'secret', 'awesome', 'covers'];
 
     public static var curCat:Int = 0;
 

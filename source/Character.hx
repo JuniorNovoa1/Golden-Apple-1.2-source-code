@@ -1778,27 +1778,6 @@ class Character extends FlxSprite
 				iconName = 'ringi';
 
 				iconRPC = 'icon_ringi';
-			case 'ripple':
-				frames = Paths.getSparrowAtlas('characters/ripple_dude');
-				animation.addByPrefix('idle', 'IDLE', 24, false);
-				for (anim in ['LEFT', 'DOWN', 'UP', 'RIGHT']) {
-					animation.addByPrefix('sing${anim.toUpperCase()}', anim, 24, false);
-				}
-
-				addOffset('idle');
-				addOffset('singLEFT');
-				addOffset('singDOWN');
-				addOffset('singUP');
-				addOffset('singRIGHT');
-
-				setGraphicSize(Std.int(width * furiosityScale),Std.int(height * furiosityScale));
-				updateHitbox();
-
-				antialiasing = false;
-
-				playAnim('idle');
-
-				iconName = 'rippler';
 			case 'bambom':
 				frames = Paths.getSparrowAtlas('characters/bambom');
 				animation.addByPrefix('idle', 'IDLE', 24, false);
@@ -2100,30 +2079,6 @@ class Character extends FlxSprite
 				iconName = 'dale';
 
 				iconRPC = 'icon_dale';
-
-			case 'irreversible_action':
-				tex = Paths.getSparrowAtlas('characters/irreversible_action');
-				frames = tex;
-				animation.addByPrefix('idle', 'IDLE', 24, false);
-				animation.addByPrefix('singUP', 'UP', 24, false);
-				animation.addByPrefix('singRIGHT', 'RIGHT', 24, false);
-				animation.addByPrefix('singDOWN', 'DOWN', 24, false);
-				animation.addByPrefix('singLEFT', 'LEFT', 24, false);
-		
-				addOffset('idle');
-				addOffset("singUP", 30);
-				addOffset("singRIGHT", 140, 393);
-				addOffset("singLEFT");
-				addOffset("singDOWN");
-				setGraphicSize(Std.int(width * furiosityScale),Std.int(height * furiosityScale));
-				updateHitbox();
-				antialiasing = false;
-		
-				playAnim('idle');
-
-				iconName = 'action';
-
-				iconRPC = 'icon_action';
 
 			case 'dingle':
 				tex = Paths.getSparrowAtlas('characters/dingle');
