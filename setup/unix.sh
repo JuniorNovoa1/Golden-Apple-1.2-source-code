@@ -11,6 +11,6 @@ haxelib git lime https://github.com/JuniorNovoa1/lime-android-git
 haxelib git openfl https://github.com/CodenameCrew/cne-openfl
 haxelib git flixel https://github.com/CodenameCrew/cne-flixel
 haxelib git flixel-addons https://github.com/CodenameCrew/cne-flixel-addons
-haxelib git flixel-tools https://github.com/HaxeFlixel/flixel-tools/tree/dev
+haxelib git flixel-tools https://github.com/HaxeFlixel/flixel-tools dev
 haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
 echo Finished!
