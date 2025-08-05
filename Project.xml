@@ -76,7 +76,7 @@
 	<assets path="assets/fonts" embed='true'/>
 	<!-- _______________________________ Libraries ______________________________ -->
 
-	<haxedef name="shadersEnabled" unless="mac"/>
+	<haxedef name="shadersEnabled"/>
 
 	<haxelib name="flixel" />
 	<haxedev set='webgl' />
